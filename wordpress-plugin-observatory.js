@@ -4,6 +4,7 @@ var buttonDelete = '<button type="button" id="@@" style="background-color: #f443
 var buttonOpen = '<button type="button" id="@@" style="background-color: #008cb7!important; box-shadow: 0 3px 1px -2px #0003, 0 2px 2px 0 #00000024, 0 1px 5px 0 #0000001f; color: #fff; line-height: 36px; padding: 0 16px; margin: 5px; font-size: 12px;"> OPEN OBSERVATORY </button>';
 
 function getDocument() {
+    console.log('Holaaaa')
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('name');
 
