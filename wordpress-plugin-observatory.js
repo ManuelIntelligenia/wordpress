@@ -78,5 +78,8 @@ function getDocument() {
     // }
 }
 
-getDocument();
-setInterval(getDocument(),5000);
+function intervalo() {
+    intervalo = setInterval(getDocument, 5000);
+}
+
+intervalo();
