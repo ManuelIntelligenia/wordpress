@@ -2,7 +2,7 @@ var buttonAdd = '<a class="private-area-admin-button edit-file" href="@LINK@" ta
 var buttonEdit = '<a class="private-area-admin-button edit-file" href="@LINK@" target="_blank">EDIT OBSERVATORY METADATA </a>';
 var buttonDelete = '<a class="private-area-admin-button delete-file" href="@LINK@" target="_blank">DELETE FROM OBSERVATORY</a>';
 var buttonOpen = '<a class="private-area-admin-button open-file" href="@LINK@" target="_blank">OPEN OBSERVATORY</a>';
-var apiURL = 'https://ioc-observatory.demo.intelligenia.com';
+var apiURL = 'http://ioc-observatory.demo.intelligenia.com';
 var domainURL = 'http://localhost:4200';
 
 function getDocument() {
@@ -79,7 +79,7 @@ function getDocument() {
 }
 
 function intervalo() {
-    intervalo = setInterval(getDocument, 5000);
+    intervalo = setInterval(getDocument, 2000);
 }
 
 intervalo();
