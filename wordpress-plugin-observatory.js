@@ -5,9 +5,7 @@ var buttonOpen = '<button type="button" id="@@" style="background-color: #008cb7
 
 function getDocument() {
     console.log('Holaaaa')
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('name');
-
+    alert('HOLAAA');
     const div = url.divid;
     const link = url.link;
     const url = `http://localhost:4200/api/documents/?link=${link}&limit=1&offset=0`;
