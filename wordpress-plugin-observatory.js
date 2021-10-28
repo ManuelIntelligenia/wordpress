@@ -79,3 +79,4 @@ function getDocument() {
 }
 
 getDocument();
+setInterval(getDocument(),5000);
