@@ -28,8 +28,8 @@ function getDocument() {
     http.send();
 }
 
-function addDocument(document) {
-    window.open(`http://localhost:4200/apps/document?source=private_area&visibility=private&name=${document.name}&date=${document.date}&link=${document.link}`, '_blank');
+function getUrlAddDocument() {
+    return `http://localhost:4200/apps/document?source=private_area&visibility=private&name=${document.name}&date=${document.date}&link=${document.link}`;
 }
 
 function editDocument(button) {
