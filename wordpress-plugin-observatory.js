@@ -7,11 +7,8 @@ var buttonOpen = '<button type="button" id="open-button-1" style="background-col
 })(getDocument());
 
 function getDocument() {
-    console.log('gholaaaa')
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams);
     const myParam = urlParams.get('name');
-    console.log(myParam);
 
     const div = url.divid;
     const link = url.link;
