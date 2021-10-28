@@ -5,23 +5,23 @@ var buttonOpen = '<button type="button" id="@@" style="background-color: #008cb7
 
 function getDocument() {
     console.log('Holaaaa')
-    alert('HOLAAA');
-    const div = url.divid;
-    const link = url.link;
-    const url = `http://localhost:4200/api/documents/?link=${link}&limit=1&offset=0`;
-    const token = localStorage.getItem('ngx_token');
-    const http = new XMLHttpRequest();
-    http.open("GET", url);
-    http.setRequestHeader('Authorization', `token ${token.replace('"', '').replace('"', '')}`);
-    http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            const resultado = JSON.parse(this.responseText)
-            $(`#${div}`).html(() => {
-                return resultado.count > 0 ? `${buttonEdit}${buttonDelete}${buttonOpen}` : `${buttonAdd}`;
-            });
-        }
-    }
-    http.send();
+    // alert('HOLAAA');
+    // const div = url.divid;
+    // const link = url.link;
+    // const url = `http://localhost:4200/api/documents/?link=${link}&limit=1&offset=0`;
+    // const token = localStorage.getItem('ngx_token');
+    // const http = new XMLHttpRequest();
+    // http.open("GET", url);
+    // http.setRequestHeader('Authorization', `token ${token.replace('"', '').replace('"', '')}`);
+    // http.onreadystatechange = function () {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         const resultado = JSON.parse(this.responseText)
+    //         $(`#${div}`).html(() => {
+    //             return resultado.count > 0 ? `${buttonEdit}${buttonDelete}${buttonOpen}` : `${buttonAdd}`;
+    //         });
+    //     }
+    // }
+    // http.send();
 }
 
 function getUrlAddDocument() {
