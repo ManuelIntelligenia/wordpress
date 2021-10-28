@@ -8,8 +8,10 @@ var domainURL = 'http://localhost:4200';
 function getDocument() {
     console.log('Holaaaa')
     const containerRow = $('.private-area-row[data-id]');
+    console.log(containerRow, 'containerRow');
     for (let index = 0; index < containerRow.length; index++) {
         const document_id = containerRow[index].getAttribute('data-id');
+        console.log(document_id, 'document_id');
         if ($('.private-area-row[data-id=' + document_id + '] .private-area-top .private-area-text .file-link .file-title').length > 0) {
             const document_text = $('.private-area-row[data-id=' + document_id + '] .private-area-top .private-area-text .file-link .file-title')[0];
             const document_date = $('.private-area-row[data-id=' + document_id + '] .private-area-top .private-area-info .private-area-calendar span')[0];
@@ -23,7 +25,7 @@ function getDocument() {
             const http = new XMLHttpRequest();
             http.open("GET", `${apiURL}/api/documents/check_if_exists/?document_link=${document_link}&limit=1&offset=0`);
             http.onreadystatechange = function () {
-            console.log(this.status, 'this.status');
+                console.log(this.status, 'this.status');
                 switch (this.status) {
                     case 200:
                         buttonEdit = buttonEdit.replace('@LINK@', `${apiURL}/apps/document/${document_id}`);
