@@ -16,6 +16,7 @@ function getDocument() {
             const http = new XMLHttpRequest();
             http.open("GET", `${apiURL}/api/documents/check_if_exists/?document_link=${document_link}&limit=1&offset=0`);
             http.onreadystatechange = function () {
+                console.log(this.status)
                 switch (this.status) {
                     case 200:
                         buttonEdit = buttonEdit.replace('@LINK@', `${apiURL}/apps/document/${document_id}`);
