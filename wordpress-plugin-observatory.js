@@ -26,6 +26,7 @@ function getDocument() {
                             return `${buttonEdit}${buttonDelete}${buttonOpen}`;
                         });
                         break;
+                    case 0:
                     case 404:
                         buttonAdd = buttonAdd.replace('@LINK@', `${apiURL}/apps/document?source=private_area&visibility=private&name=${document_text}&date=${document_date}&link=${document_link}`);
                         $(`#${document_id}`).html(() => {
