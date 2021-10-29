@@ -2,7 +2,7 @@ var buttonAdd = '<a class="private-area-admin-button edit-file" href="@LINK@" ta
 var buttonEdit = '<a class="private-area-admin-button edit-file" href="@LINK@" target="_blank">EDIT OBSERVATORY METADATA </a>';
 var buttonDelete = '<a class="private-area-admin-button delete-file" href="@LINK@" target="_blank">DELETE FROM OBSERVATORY</a>';
 var buttonOpen = '<a class="private-area-admin-button open-file" href="@LINK@" target="_blank">OPEN OBSERVATORY</a>';
-var apiURL = 'https://ioc-observatory.demo.intelligenia.com';
+var apiURL = 'http://localhost:4200';
 var domainURL = 'http://localhost:4200';
 
 function getDocument() {
