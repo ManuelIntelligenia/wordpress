@@ -19,16 +19,16 @@ function getDocument() {
                 console.log(this.status)
                 switch (this.status) {
                     case 200:
-                        buttonEdit = buttonEdit.replace('@LINK@', `${apiURL}/apps/document/${document_id}`);
-                        buttonDelete = buttonEdit.replace('@LINK@', `${apiURL}/apps/document-detail/${document_id}?delete=true`);
-                        buttonOpen = buttonEdit.replace('@LINK@', `${apiURL}/apps/document-detail/${document_id}`);
+                        buttonEdit = buttonEdit.replace('@LINK@', `${domainURL}/apps/document/${document_id}`);
+                        buttonDelete = buttonEdit.replace('@LINK@', `${domainURL}/apps/document-detail/${document_id}?delete=true`);
+                        buttonOpen = buttonEdit.replace('@LINK@', `${domainURL}/apps/document-detail/${document_id}`);
                         $(`#${document_id}`).html(() => {
                             return `${buttonEdit}${buttonDelete}${buttonOpen}`;
                         });
                         break;
                     case 0:
                     case 404:
-                        buttonAdd = buttonAdd.replace('@LINK@', `${apiURL}/apps/document?source=private_area&visibility=private&name=${document_text}&date=${document_date}&link=${document_link}`);
+                        buttonAdd = buttonAdd.replace('@LINK@', `${domainURL}/apps/document?source=private_area&visibility=private&name=${document_text}&date=${document_date}&link=${document_link}`);
                         $(`#${document_id}`).html(() => {
                             return `${buttonAdd}`;
                         });
